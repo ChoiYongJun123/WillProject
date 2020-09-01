@@ -1,15 +1,12 @@
-package project.action;
+package member.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import project.vo.ActionForward;
-
+import member.vo.ActionForward;
 
 public interface Action {
-
 	
 	ActionForward execute(HttpServletRequest request, HttpServletResponse response)throws Exception;
-	
-	
+
 }

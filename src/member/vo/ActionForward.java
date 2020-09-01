@@ -1,27 +1,24 @@
-package project.vo;
+package member.vo;
 
-public class ActionForward {
+
+
+public class ActionForward { 
 	
-	private String Path;
-	
+	private String path; 
 	private boolean isRedirect;
-
-	
 	
 	public String getPath() {
-		return Path;
+		return path;
 	}
-
 	public void setPath(String path) {
-		Path = path;
+		this.path = path;
 	}
-
 	public boolean isRedirect() {
 		return isRedirect;
 	}
-
 	public void setRedirect(boolean isRedirect) {
 		this.isRedirect = isRedirect;
 	}
+	
 	
 }

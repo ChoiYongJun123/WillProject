@@ -33,7 +33,7 @@
 
 							if(id == null){
 								%>
-							<a href="ProejectLoginForm.io">로그인</a> | <a href="ProejectJoinForm.io">회원가입</a>
+							<a href="LoginForm.me">로그인</a> | <a href="JoinForm.me">회원가입</a>
 								<%
 							}else if(id.equals("admin1")){
 								%>

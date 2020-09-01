@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
++6 ++
+45666666666
+4 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
 <!DOCTYPE html>
@@ -189,6 +191,8 @@
                 		
                 		<div class="create-ac">
                 			<p>아이디가 없으신가요? <a href="ProejectJoinForm.io">회원가입</a></p>
+                			<p>아이디가 기억안나신가요? <a href="findID.me">아이디찾기</a></p>
+                			<p>비밀번호가 기억안나신가요? <a href="findPass.me">비밀번호찾기</a></p>
                 		</div>
                 		<div class="login-menu">
                 			<a href="about.html">About</a>
