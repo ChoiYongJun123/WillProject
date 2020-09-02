@@ -5,11 +5,10 @@
 		auth="Container"
 		type="javax.sql.DataSource"
 		driverClassName="com.mysql.jdbc.Driver"
-		url="jdbc:mysql://localhost:3306/jsp_model2_db5"
+		url="jdbc:mysql://localhost:3306/rentcar"
 		username="root"
-		password="1234"
+		password="12345678"
 		maxActive="100"
 		maxIdle="20"
 	/>
 </Context>
-

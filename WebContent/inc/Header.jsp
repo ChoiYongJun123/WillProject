@@ -28,8 +28,8 @@
                     <div class="col-lg-3 text-right">
                         <div class="header-social-icons">
 						<%
-							String id=(String)session.getAttribute("id");
-							id=request.getParameter("id");
+							String id=(String)session.getAttribute("Member_id");
+							id=request.getParameter("Member_id");
 
 							if(id == null){
 								%>

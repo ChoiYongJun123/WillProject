@@ -1,6 +1,4 @@
-+6 ++
-45666666666
-4 <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
 <!DOCTYPE html>
@@ -121,11 +119,11 @@
 							<form action="MemberLoginPro.me" method="post" name="loginForm">
 							
 								<div class="username">
-									<input type="text" placeholder="아이디">
+									<input type="text" placeholder="아이디" name="Member_id">
 								</div>
 								
 								<div class="password">
-									<input type="password" placeholder="패스워드">
+									<input type="password" placeholder="패스워드" name="Member_pass">
 								</div>
 								
 								<div class="log-btn">

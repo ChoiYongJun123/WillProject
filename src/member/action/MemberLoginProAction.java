@@ -15,8 +15,9 @@ public class MemberLoginProAction implements Action {
 		System.out.println("MemberLoginProAction");
 		ActionForward forward=null;
 		int isLoginsuccess=0;
-		String id=request.getParameter("id");
-		String pass=request.getParameter("pass");
+		String id=request.getParameter("Member_id");
+		String pass=request.getParameter("Member_pass");
+		System.out.println(id);
 		
 		MemberLoginProService mlps=new MemberLoginProService();
 		isLoginsuccess=mlps.MemberLogin(id,pass);
@@ -25,7 +26,7 @@ public class MemberLoginProAction implements Action {
 		if(isLoginsuccess==1) {
 			request.setAttribute("id", id);
 			forward=new ActionForward();
-			forward.setPath("/Member/main.jsp");
+			forward.setPath("index.jsp");
 			forward.setRedirect(false);
 			
 		}else if(isLoginsuccess==0) {
