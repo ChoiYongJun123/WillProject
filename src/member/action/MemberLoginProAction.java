@@ -24,7 +24,7 @@ public class MemberLoginProAction implements Action {
 				
 		
 		if(isLoginsuccess==1) {
-			request.setAttribute("id", id);
+			request.setAttribute("Member_id", id);
 			forward=new ActionForward();
 			forward.setPath("index.jsp");
 			forward.setRedirect(false);

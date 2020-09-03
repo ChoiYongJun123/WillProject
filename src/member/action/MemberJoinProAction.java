@@ -50,8 +50,8 @@ public class MemberJoinProAction implements Action {
 			
 			if(insertsuccess) {
 				forward=new ActionForward();
-				forward.setPath("Member_Login.jsp");
-				forward.setRedirect(true);
+				forward.setPath("Member/Member_Login.jsp");
+				forward.setRedirect(false);
 				
 			}else {
 				response.setContentType("text/html;charset=UTF-8"); 

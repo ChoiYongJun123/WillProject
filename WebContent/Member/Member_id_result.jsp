@@ -9,5 +9,6 @@
 <body>
 아이디찾기 성공
 <%=request.getParameter("findid") %>
+<input type="button" value="확인" onclick="location.href='../LoginForm.me'">
 </body>
 </html>

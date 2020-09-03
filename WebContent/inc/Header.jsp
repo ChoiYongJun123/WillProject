@@ -28,24 +28,31 @@
                     <div class="col-lg-3 text-right">
                         <div class="header-social-icons">
 						<%
-							String id=(String)session.getAttribute("Member_id");
-							id=request.getParameter("Member_id");
+							String id=(String)request.getAttribute("Member_id");
+							String snsid=(String)request.getAttribute("Member_snsid");
 
-							if(id == null){
+							if(id == null ){
 								%>
 							<a href="LoginForm.me">로그인</a> | <a href="JoinForm.me">회원가입</a>
 								<%
-							}else if(id.equals("admin1")){
+							}else if(id.equals("admin")){
 								%>
 							<%-- 	<%=id %>님  |	<a href="member/qna_member_logout.jsp">로그아웃</a> | <a href="MemberList.me">회원리스트</a> --%>
-							<%=id %>님  |	<a href="#">logout</a> | <a href="#">admin page</a>
+							<%=id %>님  |	<a href="MemberLogout.me">logout</a> | <a href="#">admin page</a>
 								<%
 							}else{
 								%>
-							<%=id %>님  |	<a href="#">logout</a> 
+							<%=id %>님  |	<a href="MemberLogout.me">logout</a> 
 								<%
 								}
-						%>
+							
+							
+							if(snsid !=null){ 
+								%><%=snsid%> 님 | <a href="https://developers.kakao.com/logout">logout</a>
+							<% }%>
+						
+							
+					
                         </div>
                     </div>
                     <!--== Social Icons End ==-->

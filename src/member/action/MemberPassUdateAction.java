@@ -37,7 +37,7 @@ public class MemberPassUdateAction implements Action {
 		if(ispassupdate) {
 			forward=new ActionForward();
 			forward.setPath("Member/Member_Login.jsp");
-			forward.setRedirect(true);
+			forward.setRedirect(false);
 		}else {
 			response.setContentType("text/html;charset=UTF-8"); 
 			PrintWriter out = response.getWriter(); 

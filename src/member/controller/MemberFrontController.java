@@ -1,3 +1,4 @@
+
 package member.controller;
 
 import java.io.IOException;
@@ -13,6 +14,7 @@ import member.action.Action;
 import member.action.MemberIDFindAction;
 import member.action.MemberJoinProAction;
 import member.action.MemberLoginProAction;
+import member.action.MemberLogoutAction;
 import member.action.MemberPassFindAction;
 import member.action.MemberPassUdateAction;
 import member.action.MemberSnsLoginProAction;
@@ -79,6 +81,13 @@ public class MemberFrontController extends HttpServlet {
 			}
 		}else if(command.equals("/PassupdatePro.me")) {
 			action=new MemberPassUdateAction();
+			try {
+				forward=action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/x")) {
+			action=new MemberLogoutAction();
 			try {
 				forward=action.execute(request, response);
 			} catch (Exception e) {

@@ -64,54 +64,74 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="book-a-car">
-                            <form action="LoginPro.io" method="post" name="loginform">
+                            <form action="MemberJoinPro.me" method="post" name="loginform">
                                 <!--== Pick Up Location ==-->
                                 <div>
-                                <h2>로그인</h2>
+                                <h2>회원가입</h2>
                                 </div><br>
                                 <div class="pickup-location book-item">
                                     <h4>아이디</h4>
-                                    <input type="text" name="id" id="id" required="required" />
+                                    <input type="text" name="id" id="id" required="required" 
+											placeholder="4~12자리 영문,숫자 조합">
+                                    <input type="button" value="중복체크" id="btn">	
+                                    <span id="checkIdResult"><!-- 자바스크립스에 의해 메세지 출력할 공간 --></span>
+                                    
                                 </div>
-                                <!--== Pick Up Location ==-->
-
-                                <!--== Pick Up Date ==-->
-                                <div class="pick-up-date book-item">
-                                    <h4>대여일 선택:</h4>
-                                    <input id="startDate" placeholder="Pick Up Date" />
-
-                                    <div class="return-car">
-                                        <h4>반납일 선택:</h4>
-                                        <input id="endDate" placeholder="Return Date" />
-                                    </div>
+                                 <div class="pickup-location book-item">
+                                    <h4>비밀번호</h4>
+                                    <input type="password" name="pass" required="required" 
+											placeholder="8~16자리 영문,숫자,특수문자 조합" onkeyup="checkPasswd(this)">
+									<span id="checkPasswdResult"><!-- 자바스크립스에 의해 메세지 출력할 공간 --></span>
+                                    
                                 </div>
-                                <!--== Pick Up Location ==-->
-
-                                <!--== Car Choose ==-->
-                                <div class="choose-car-type book-item">
-                                    <h4>차량유형 선택:</h4>
-                                    <select class="custom-select">
-                                      <option selected>선택하세요</option>
-                                      <option value="1">경차</option>
-                                      <option value="2">소형</option>
-                                      <option value="3">중형</option>
-                                      <option value="4">준대형</option>
-                                      <option value="5">대형</option>
-                                      <option value="6">승합</option>
-                                      <option value="7">SUV/RV</option>
-                                      <option value="8">전기차</option>
-                                      <option value="9">수입차</option>
-                                      
-                                      
-                                    </select>
+                                 <div class="pickup-location book-item">
+                                    <h4>이름</h4>
+                                    <input type="text" name="name" required="required" />
+                                    
                                 </div>
-                                <!--== Car Choose ==-->
-								<div class="pickup-location book-item">
-                                    <h4>아이디</h4>
-                                    <input type="text" name="id" id="id" required="required" />
+                                 <div class="pickup-location book-item">
+                                    <h4>나이</h4>
+                                    <input type="text" name="age" required="required" />
+                                    
                                 </div>
-                                <div class="book-button text-center">
-                                    <button class="book-now-btn">검색</button>
+                                 <div class="pickup-location book-item">
+                                    <h4>성별</h4>
+                                   <select name="gender" required="required"><option>남</option><option>여</option></select>
+                                    
+                                </div>
+                                 <div class="pickup-location book-item">
+                                    <h4>전화번호</h4>
+                                    <input type="text" name="tel" required="required" />
+                                    
+                                </div>
+                                 <div class="pickup-location book-item">
+                                    <h4>주소</h4>
+                                    <input type="text" name="adress" required="required">
+						   		    <input type="button" value="주소검색" onclick="juso()">
+                                    
+                                </div>
+                                <div class="pickup-location book-item">
+                                    <h4>이메일</h4>
+									<input type="text" name="email" required="required">
+										@<select name="email1" required="required">
+										<option>naver.com</option><option>google.com</option><option>hanmail.net</option></select>
+                                    
+                                </div>
+                                 <div class="pickup-location book-item">
+                                    <h4>면허증</h4>
+                                    <input type="text" name="license"  required="required" />
+                                    
+                                </div>
+                                 <div class="pickup-location book-item">
+                                    <h4>선택사항</h4>
+                                    흡연여부<input type="checkbox" name="smoke" value="흡연">
+									애완동물<input type="checkbox" name="pet" value="동물">
+									아기(카시트)<input type="checkbox" name="baby" value="아기">
+                                    
+                                </div>
+                              
+						                                <div class="book-button text-center">
+                                    <button class="book-now-btn">가입</button>
                                 </div>
                             </form>
                         </div>
@@ -132,60 +152,7 @@
         </div>
         <!--== slide Item One ==-->
     </section>
-    <!--== Slider Area End ==-->
-
-    <!--== About Us Area Start ==-->
-<!--     <section id="about-area" class="section-padding"> -->
-<!--         <div class="container"> -->
-<!--             <div class="row"> -->
-<!--                 Section Title Start -->
-<!--                 <div class="col-lg-12"> -->
-<!--                     <div class="section-title  text-center"> -->
-<!--                         <h2>About us</h2> -->
-<!--                         <span class="title-line"><i class="fa fa-car"></i></span> -->
-<!--                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-<!--                     </div> -->
-<!--                 </div> -->
-<!--                 Section Title End -->
-<!--             </div> -->
-
-<!--             <div class="row"> -->
-<!--                 About Content Start -->
-<!--                 <div class="col-lg-6"> -->
-<!--                     <div class="display-table"> -->
-<!--                         <div class="display-table-cell"> -->
-<!--                             <div class="about-content"> -->
-<!--                                 <p>Lorem simply dummy is a texted of the printing costed and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p> -->
-
-<!--                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi aliquid debitis optio praesentium, voluptate repellat accusantium deserunt eius.</p> -->
-<!--                                 <div class="about-btn"> -->
-<!--                                     <a href="#">Book a Car</a> -->
-<!--                                     <a href="#">Contact Us</a> -->
-<!--                                 </div> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </div> -->
-<!--                 About Content End -->
-
-<!--                 About Video Start -->
-<!--                 <div class="col-lg-6"> -->
-<!--                     <div class="about-video"> -->
-<!--                         <iframe src="https://player.vimeo.com/video/121982328?title=0&byline=0&portrait=0"></iframe> -->
-<!--                     </div> -->
-<!--                 </div> -->
-<!--                 About Video End -->
-<!--             </div> -->
-<!--         </div> -->
-<!--     </section> -->
-<!--     == About Us Area End == -->
- 
-<!--                     </div> -->
-<!--                 </div> -->
-<!--             </div> -->
-<!--         </div> -->
-<!--     </div> -->
-<!--     == Partner Area End == -->
+   
 
     <!--== Footer Area Start ==-->
     <section id="footer-area">
@@ -323,7 +290,73 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!--=== Mian Js ===-->
     <script src="assets/js/main.js"></script>
-
+    
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	
+	<script type="text/javascript">
+jQuery(document).ready(function () {
+	$('#btn').click(function() {
+		var regex = /^[A-Za-z][A-Za-z0-9]{3,11}$/;
+		var id=$('#id').val();
+		if(regex.exec(id)) { 
+			//중복 체크 실행
+			$.ajax('Member/DupCheck.jsp',{data:{id:id},
+							success:function(rdata){
+								$('#checkIdResult').html(rdata);
+							}});
+			
+		}else{
+			alert('아이디 형식이적합하지 않음');
+			
+		}
+			
+	})
+});
+	
+	function checkPasswd(passwd) {
+		// 8 ~ 16자리 패스워드 영문,숫자,특수문자 조합
+		// 1. 정규표현식 지정
+		// 1) 길이 체크 : 8 ~ 16자리. 영문 대문자&소문자&숫자&특수문자(!@#$%^_)
+		var lengthRegex = /^[A-Za-z0-9!@#$%^_]{8,16}$/;
+		// 2) 소문자 체크
+		var lowerCaseRegex = /[a-z]/;
+		// 3) 숫자 체크
+		var digitRegex = /[0-9]/;
+		// 4) 특수문자 체크
+		var specCharRegex = /[!@#$%^_]/;
+		
+// 		// 2. 체크 후 메세지 표시할 공간의 태그 id 값 가져오기
+		var element = document.getElementById('checkPasswdResult'); // checkPasswdResult 값을 ID 로 갖는 태그 찾기
+		
+// 		// 3. 정규표현식을 통한 유효성 검사 수행(정규표현식 저장 변수명.exec() 를 사용)
+// 		// 함수 호출 시 전달받은 파라미터(id) 의 값을 정규표현식으로 검사
+		// 길이, 대문자, 소문자, 숫자, 특수문자 체크를 모두 통과했을 경우
+		if(passwd.value!=""){
+			if(lengthRegex.exec(passwd.value) && lowerCaseRegex.exec(passwd.value) && digitRegex.exec(passwd.value) &&
+					specCharRegex.exec(passwd.value)) {
+// 			alert('유효성 검사 통과');	
+			// 지정된 태그 내에 메세지 표시
+				element.innerHTML = "적합한 패스워드";
+			} else { // 유효성 검사를 통과하지 못했을 경우
+// 			alert('유효성 검사 탈락');
+				element.innerHTML = "적합하지 않은 패스워드";
+			}
+		}else{
+				element.innerHTML = "";
+		}		
+	}
+	
+	
+	function juso() {//주소 api
+		
+	    new daum.Postcode({
+	        oncomplete: function(data) {
+	        	loginform.adress.value=data.jibunAddress	            
+	        }
+	    }).open();
+	}
+</script>
+	
 </body>
 
 </html>

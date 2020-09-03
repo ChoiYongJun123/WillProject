@@ -11,7 +11,8 @@
     <!--=== Favicon ===-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <title>Cardoor - Car Rental HTML Template</title>
+    <title>Cardoor - Car Rental H
+    TML Template</title>
 
     <!--=== Bootstrap CSS ===-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +53,7 @@
     <!--== Preloader Area End ==-->
 
     <!--== Header Area Start ==-->
-      <jsp:include page="inc/Header.jsp" />
+      <jsp:include page="inc/Header.jsp" />X
 
     <!--== Header Area End ==-->
 

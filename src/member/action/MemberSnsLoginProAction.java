@@ -22,9 +22,9 @@ public class MemberSnsLoginProAction implements Action {
 		
 		
 		if(isSnsLoginsuccess) {
-			request.setAttribute("snsid",id);
+			request.setAttribute("Member_snsid",id);
 			forward=new ActionForward();
-			forward.setPath("Member/main.jsp");
+			forward.setPath("index.jsp");
 			forward.setRedirect(false);
 		}else {
 			response.setContentType("text/html;charset=UTF-8"); 
