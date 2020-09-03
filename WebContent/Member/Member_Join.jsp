@@ -112,10 +112,14 @@
                                 </div>
                                 <div class="pickup-location book-item">
                                     <h4>이메일</h4>
-									<input type="text" name="email" required="required">
-										@<select name="email1" required="required">
+									<input type="text" name="email" id="email" required="required">
+										@<select name="email1" id="email1" required="required">
 										<option>naver.com</option><option>google.com</option><option>hanmail.net</option></select>
-                                    
+                                    <input type="button" value="이메일 인증하기" id="emalicheck">
+                                    <span id="checkemailResult"><!-- 자바스크립스에 의해 메세지 출력할 공간 --></span>
+                                    <input type="text"  id="tchecknum">
+                                    <input type="button" value="확인" id="bchecknum">
+                                    <span id="checkResult1"><!-- 자바스크립스에 의해 메세지 출력할 공간 --></span>
                                 </div>
                                  <div class="pickup-location book-item">
                                     <h4>면허증</h4>
@@ -311,6 +315,32 @@ jQuery(document).ready(function () {
 		}
 			
 	})
+	
+	$('#emalicheck').click(function() {
+		var email=$('#email').val()+"@"+$('#email1').val();
+	
+		
+		if(email !=null){
+			$.ajax('Member/EmailCheck.jsp',{data:{email:email},
+				success:function(rdata){
+					//timer
+					$('#bchecknum').click(function() {
+						var checkNum=$('#tchecknum').val();
+						if(rdata.trim() == checkNum){
+							$('#checkResult1').html('인증됨');
+						}else{
+							$('#checkResult1').html('인증번호가 다릅니다');
+						}
+					});
+				}});
+		}else {
+			alert('Email 형식이적합하지 않음');
+		}
+		
+	});
+	
+	
+	
 });
 	
 	function checkPasswd(passwd) {

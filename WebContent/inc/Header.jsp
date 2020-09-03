@@ -48,7 +48,7 @@
 							
 							
 							if(snsid !=null){ 
-								%><%=snsid%> 님 | <a href="https://developers.kakao.com/logout">logout</a>
+								%><%=snsid%> 님 | <a href="Member/MemberSnsLogout.jsp">logout</a>
 							<% }%>
 						
 							
